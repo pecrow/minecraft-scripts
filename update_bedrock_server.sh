@@ -17,7 +17,7 @@ minetmp=/tmp/minecraft-tmp
 
 echo "----------------Start----------------"
 echo "Starting minecraft bedrock server update on $(date)"
-echo "Stopping Mincraft.Service"
+echo "Stopping Minecraft.Service"
 sudo systemctl stop minecraft.service
 echo "Creating backup directory at $minebak and temp directory at $minetmp"
 mkdir -vp $minebak $minetmp 2>/dev/null
