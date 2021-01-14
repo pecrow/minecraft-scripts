@@ -44,6 +44,7 @@
 
   Change the script permissions to 700 and excecute it:
 > sudo chmod 700
+
 > ./update_bedrock_server.sh
 
 
