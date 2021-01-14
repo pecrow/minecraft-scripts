@@ -59,7 +59,7 @@ Here are a few examples:
 2. Choose one of the examples below to add into this file in a new line, save, and quit.  (Only add 1)
 
 
-This one runs it daily and saves a log file to /tmp/minecraft-tmp/update_dedrock_server.log
+This one runs it daily and saves a log file to /tmp/minecraft-tmp/update_bedrock_server.log
 > 0 0 * * * /home/alram/Update_Bedrock_Server.sh >> /tmp/minecraft-tmp/update_bedrock_server.log  2>&1
 
 This one runs it every week:
