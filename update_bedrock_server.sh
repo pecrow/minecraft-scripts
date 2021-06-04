@@ -26,7 +26,7 @@ echo "Backing up all configuration files and worlds to $minebak"
 rsync -av --exclude='.*' $minedir/* $minebak/
 echo "Downloading latest bedrock server files from https://www.minecraft.net/en-us/download/server/bedrock"
 #This one was fun to think about. I'm sure I could of filetered everything w/ awk, just lazy to look it up. Don't judge me.
-wget https://www.minecraft.net/en-us/download/server/bedrock -P $minetmp/ ; wget  $(cat $minetmp/bedrock | grep bin-linux | awk '{print $2}' |sed 's/href=//' | tr -d '"') -P $minetmp/
+curl https://www.minecraft.net/en-us/download/server/bedrock -P $minetmp/bedrock ; wget  $(cat $minetmp/bedrock | grep bin-linux | awk '{print $2}' |sed 's/href=//' | tr -d '"') -P $minetmp/
 echo "Now unzipping file $(cat $minetmp/bedrock | grep bin-linux | awk '{print $2}' |sed 's/href=//' | tr -d '"' |awk -F / '{print $NF}') "
 unzip -o $minetmp/$(cat $minetmp/bedrock | grep bin-linux | awk '{print $2}' |sed 's/href=//' | tr -d '"' |awk -F / '{print $NF}')  -d $minedir
 echo "Cleaning  $minetmp"
