@@ -26,7 +26,7 @@ echo "Backing up all configuration files and worlds to $minebak"
 rsync -av --exclude='.*' $minedir/* $minebak/
 echo "Downloading latest bedrock server files from https://www.minecraft.net/en-us/download/server/bedrock"
 #This one was fun to think about. I'm sure I could of filetered everything w/ awk, just lazy to look it up. Don't judge me.
-curl https://www.minecraft.net/en-us/download/server/bedrock -P $minetmp/bedrock ; wget  $(cat $minetmp/bedrock | grep bin-linux | awk '{print $2}' |sed 's/href=//' | tr -d '"') -P $minetmp/
+curl "https://www.minecraft.net/en-us/download/server/bedrock" -H "Accept-Encoding: gzip,deflate,sdch" -H "Accept-Language: en-US,en;q=0.8" -H "User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.143 Safari/537.36" -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8" -H "Referer: http://google.com"-H "Connection: keep-alive" -H "Cache-Control: max-age=0" --compressed -P $minetmp/bedrock ; wget  $(cat $minetmp/bedrock | grep bin-linux | awk '{print $2}' |sed 's/href=//' | tr -d '"') -P $minetmp/
 echo "Now unzipping file $(cat $minetmp/bedrock | grep bin-linux | awk '{print $2}' |sed 's/href=//' | tr -d '"' |awk -F / '{print $NF}') "
 unzip -o $minetmp/$(cat $minetmp/bedrock | grep bin-linux | awk '{print $2}' |sed 's/href=//' | tr -d '"' |awk -F / '{print $NF}')  -d $minedir
 echo "Cleaning  $minetmp"
