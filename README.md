@@ -1,3 +1,5 @@
+## So.... trying to curl/wget/etc the url for https://www.minecraft.net/en-us/download/server/bedrock is now resulting in a access denied, thus the download/update no longer works. I'll try to come up w/ another workaround and update back.
+
 ## What is this?
 
   This is a small collection of tricks to automatically manage a Minecraft (Bedrock) server running on Linux with out the need of maintenance. 
