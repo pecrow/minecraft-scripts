@@ -1,4 +1,4 @@
-## So.... trying to curl/wget/etc the url for https://www.minecraft.net/en-us/download/server/bedrock is now resulting in a access denied, thus the download/update no longer works. I'll try to come up w/ another workaround and update back.
+## Fixed Access Denied error on CURL pull. 
 
 ## What is this?
 
