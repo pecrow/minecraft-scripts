@@ -11,7 +11,7 @@
 
   Most recent Linux systems that use systemctl(systemd), Ubuntu, Red hat, Oracle Linux, Centos, etc.
 
-## What exactly do they it do?
+## What exactly do they do?
 
 
 ### 1. minecraft_service.sh 
