@@ -1,5 +1,7 @@
 ## Fixed Access Denied error on CURL pull. 
 
+Update: I've created a new method to be executed in Kubernetes. Check out my guide here: https://ramirez.cr/aks-minecraft-server/ 
+
 ## What is this?
 
   This is a small collection of tricks to automatically manage a Minecraft (Bedrock) server running on Linux with out the need of maintenance. 
